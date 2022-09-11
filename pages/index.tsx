@@ -1,5 +1,5 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
+import type { NextPage } from "next";
+import Head from "next/head";
 
 const Home: NextPage = () => {
   return (
@@ -11,7 +11,8 @@ const Home: NextPage = () => {
       </Head>
       <div></div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
+export { getServerSideProps } from "../lib/src/Chakra";
