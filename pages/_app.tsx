@@ -1,7 +1,24 @@
-import type { AppProps } from 'next/app'
+import { NextComponentType, NextPageContext } from "next";
+import { NextRouter } from "next/router";
+import { Chakra } from "../lib/src/Chakra";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+interface PageProps {
+  cookies?: string;
 }
 
-export default MyApp
+interface AppRenderProps {
+  pageProps: PageProps;
+  err?: Error;
+  Component: NextComponentType<NextPageContext, AppRenderProps, object>;
+  router: NextRouter;
+}
+
+function MyApp({ Component, pageProps }: AppRenderProps) {
+  return (
+    <Chakra cookies={pageProps.cookies}>
+      <Component {...pageProps} />
+    </Chakra>
+  );
+}
+
+export default MyApp;
