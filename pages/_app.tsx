@@ -1,5 +1,6 @@
 import { NextComponentType, NextPageContext } from "next";
 import { NextRouter } from "next/router";
+import Layout from "../components/common/Layout";
 import { Chakra } from "../lib/src/Chakra";
 
 interface PageProps {
@@ -16,7 +17,9 @@ interface AppRenderProps {
 function MyApp({ Component, pageProps }: AppRenderProps) {
   return (
     <Chakra cookies={pageProps.cookies}>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </Chakra>
   );
 }
