@@ -6,6 +6,7 @@ import {
 } from "@chakra-ui/react";
 import { GetServerSidePropsContext } from "next";
 import { ReactNode } from "react";
+import theme from "../../pages/theme";
 
 interface ChakraProps {
   cookies?: string;
@@ -20,7 +21,7 @@ export function Chakra({ cookies, children }: ChakraProps) {
       : localStorageManager;
 
   return (
-    <ChakraProvider colorModeManager={colorModeManager}>
+    <ChakraProvider colorModeManager={colorModeManager} theme={theme}>
       {children}
     </ChakraProvider>
   );
