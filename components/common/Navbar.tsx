@@ -21,7 +21,7 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box position="fixed" minW={"100%"}>
+    <Box position="fixed" minW={"100%"} zIndex={1}>
       <Flex
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
@@ -61,7 +61,7 @@ export default function WithSubnavigation() {
             Logo
           </Text>
 
-          <Flex display={{ base: "none", md: "flex" }} ml={10}>
+          <Flex display={{ base: "none", md: "flex" }} ml={10} mr={2}>
             <DesktopNav navItems={NAV_ITEMS} />
           </Flex>
         </Flex>
