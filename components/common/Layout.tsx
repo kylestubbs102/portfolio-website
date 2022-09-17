@@ -7,7 +7,7 @@ function Layout({ children }: PropsWithChildren<{}>) {
   return (
     <>
       <Navbar />
-      <Container minW={"100%"} pt="60px">{children}</Container>
+      <Container minW={"100vw"}>{children}</Container>
       <Footer />
     </>
   );

@@ -7,7 +7,7 @@ function Introduction() {
     <Flex
       flexDir={"row"}
       minW={"100%"}
-      minH={"100%"}
+      minH={"100vh"}
       align={"center"}
       justify={"space-evenly"}
       py={100}
