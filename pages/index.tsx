@@ -1,9 +1,11 @@
+import { Divider, useColorModeValue } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Introduction from "../components/homepage/Introduction";
-import PageDivider from "../components/homepage/PageDivider";
 
 const Home: NextPage = () => {
+  const dividerColor = useColorModeValue("gray.300", "gray.800");
+
   return (
     <div>
       <Head>
@@ -12,7 +14,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Introduction />
-      <PageDivider label={"About"} />
+      <Divider orientation="horizontal" bgColor={dividerColor} h={.2} />
     </div>
   );
 };
