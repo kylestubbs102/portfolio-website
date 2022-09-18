@@ -15,7 +15,7 @@ function Introduction() {
     >
       <Flex flexDir={"column"} justify="center">
         <Heading fontSize={{ base: "4xl", sm: "5xl", md: "6xl", lg: "7xl" }}>
-          Hello,
+          Hello
         </Heading>
         <Flex flexDir={"row"} textAlign={{ base: "center", md: "left" }}>
           <Heading fontSize={{ base: "4xl", sm: "5xl", md: "6xl", lg: "7xl" }}>
