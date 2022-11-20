@@ -1,10 +1,7 @@
-import {
-  Box,
-  Flex,
-  Heading,
-  Image, Text
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { SKILL_BOX_ITEMS } from "../../lib/data/SkillBoxData";
 import ProfilePicNormal from "../../lib/images/ProfilePicNormal.jpg";
+import SkillBox from "../common/SkillBox";
 
 function About() {
   return (
@@ -59,6 +56,11 @@ function About() {
         >
           My skills
         </Heading>
+        <Flex my={50} justify="space-between">
+          {SKILL_BOX_ITEMS.map((item, index) =>
+            <SkillBox key={index} {...item} />
+          )}
+        </Flex>
       </Box>
     </>
   );
